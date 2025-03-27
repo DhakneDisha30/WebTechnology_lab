@@ -72,23 +72,23 @@
         <table>
             <tr>
                 <th>Name:</th>
-                <td><input type="text" name="name"></td>
+                <td><input type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <th>Address:</th>
-                <td><input type="text" name="address"></td>
+                <td><input type="text" name="address" id="address"></td>
             </tr>
             <tr>
-                <th>Email</th>
-                <td><input type="email" name="email"></td>
+                <th>Email:</th>
+                <td><input type="email" name="email" id="email"></td>
             </tr>
             <tr>
-                <th>Phone no</th>
-                <td><input type="text" name="number"></td>
+                <th>Phone no:</th>
+                <td><input type="text" name="number" id="number"></td>
             </tr>
             <tr>
-                <th>Department</th>
-                <td><input type="text" name="department"></td>
+                <th>Department:</th>
+                <td><input type="text" name="department" id="department"></td>
             </tr>
         </table>
         <br>
@@ -97,5 +97,15 @@
         <button type="submit" name="action" value="update">Update</button>
         <button type="submit" name="action" value="display">Display</button>
     </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("form").addEventListener("submit", function() {
+                setTimeout(() => { 
+                    this.reset(); 
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
